@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Stroke Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Brain Stroke Prediction</h1>
+        <form id="predictionForm">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" step="0.1" required>
+
+            <label for="hypertension">Hypertension (0/1):</label>
+            <input type="number" id="hypertension" name="hypertension" min="0" max="1" required>
+
+            <label for="heart_disease">Heart Disease (0/1):</label>
+            <input type="number" id="heart_disease" name="heart_disease" min="0" max="1" required>
+
+            <label for="ever_married">Ever Married:</label>
+            <select id="ever_married" name="ever_married" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="work_type">Work Type:</label>
+            <select id="work_type" name="work_type" required>
+                <option value="Private">Private</option>
+                <option value="Self-employed">Self-employed</option>
+                <option value="Govt_job">Government Job</option>
+                <option value="Children">Children</option>
+                <option value="Never_worked">Never Worked</option>
+            </select>
+
+            <label for="Residence_type">Residence Type:</label>
+            <select id="Residence_type" name="Residence_type" required>
+                <option value="Urban">Urban</option>
+                <option value="Rural">Rural</option>
+            </select>
+
+            <label for="avg_glucose_level">Average Glucose Level:</label>
+            <input type="number" id="avg_glucose_level" name="avg_glucose_level" step="0.1" required>
+
+            <label for="bmi">BMI:</label>
+            <input type="number" id="bmi" name="bmi" step="0.1" required>
+
+            <label for="smoking_status">Smoking Status:</label>
+            <select id="smoking_status" name="smoking_status" required>
+                <option value="Never smoked">Never smoked</option>
+                <option value="Formerly smoked">Formerly smoked</option>
+                <option value="Smokes">Smokes</option>
+                <option value="Unknown">Unknown</option>
+            </select>
+
+            <button type="submit">Predict</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
